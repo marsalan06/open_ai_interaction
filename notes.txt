@@ -1,0 +1,25 @@
+This code is creating a simple chatbot interface using the OpenAI API and the Gradio library. 
+The chatbot uses the GPT-3.5-turbo model provided by OpenAI to generate responses to user input.
+
+
+The openai module is imported and the API key is set to authenticate the use of the OpenAI API.
+
+
+The messages variable is initialized with a single message, which is the introductory message from 
+the chatbot.
+
+The chatbot function is defined, which takes an input text from the user and generates a response 
+using the OpenAI API. The input text is added to the messages list along with a "user" role. 
+The openai.ChatCompletion.create() method is used to generate a response from the GPT-3.5-turbo 
+model based on the current conversation history stored in messages. The response is then 
+added to the messages list with an "assistant" role. The response is returned from the function.
+
+
+The gradio module is imported to create the interface. A gr.Interface object is created with the 
+chatbot function as the function to be called when the user interacts with the interface. 
+The input widget is a textbox where the user can type their message. The output widget is 
+also a textbox where the response is displayed. The title, description, and theme of the 
+interface are also specified. Finally, the launch() method is called to start the interface, 
+which can be shared online by setting the share parameter to True.
+
+https://www.gradio.app/guides/creating-a-custom-chatbot-with-blockss
